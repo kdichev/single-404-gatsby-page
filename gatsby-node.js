@@ -16,10 +16,7 @@ exports.createPages = ({ actions }) => {
   });
   // 2. Create localised index pages per locale from index template
   locales.forEach((locale) => {
-    const slugs = Array.from(
-      { length: randomInteger(4995, 5000) },
-      (v, i) => i
-    );
+    const slugs = Array.from({ length: randomInteger(1, 100) }, (v, i) => i);
     slugs.forEach((slug) => {
       actions.createPage({
         path: `/${locale}/${slug}`,
